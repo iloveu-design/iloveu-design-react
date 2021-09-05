@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import Home from "../../Routes/Home";
+
 const Header = styled.header`
     display: flex;
     border-bottom: thin solid #999;
