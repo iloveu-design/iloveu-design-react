@@ -1,1 +1,3 @@
-export default () => "Projects";
+const SProject = () => "Projects";
+
+export default SProject;
