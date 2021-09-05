@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-const Project =({company, siteUrl, parts, youtube_id, thumbnail}) => {
-    return (
-      <div>
-        <img src={thumbnail} alt={company}/>
-        <h2><a href={siteUrl} target="_blank" rel="noopener noreferrer">{company}</a></h2>
-        <span>{parts.map(current=>(current))}</span>
-      </div>
-    );
-  }
+// const Project =({company, siteUrl, parts, youtube_id, thumbnail}) => {
+//     return (
+//       <div>
+//         <img src={thumbnail} alt={company}/>
+//         <h2><a href={siteUrl} target="_blank" rel="noopener noreferrer">{company}</a></h2>
+//         <span>{parts.map(current=>(current))}</span>
+//       </div>
+//     );
+//   }
 
-  const PageTitle = styled.h1`
+const PageTitle = styled.h1`
     font-size: 3rem;
-  `;
+`;
 
 const Home = () => {
     // const state = {
