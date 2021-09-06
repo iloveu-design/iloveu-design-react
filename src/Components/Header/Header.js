@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
 const Header = styled.header`
     display: flex;
@@ -13,6 +13,12 @@ const BrandLink = styled(Link)`
 const List = styled.ul`
 `;
 
+const Item = styled.li`
+    border-bottom: 4px solid ${props => props.current ? "#BCF87F" : "transparent"};
+    transition: border-bottom .5s linear;
+`;
+
+
 const SLink = styled(Link)`
     color: #222;
     padding: 1rem;
@@ -23,14 +29,14 @@ const SLink = styled(Link)`
     }
 `;
 
-const SHeader = () => (
+const SHeader = ({location: {pathname}}) => (
     <Header>
         <BrandLink to="/">사랑합니다</BrandLink>
         <List>
-            <li><SLink to="/projects">Projects</SLink></li>
+            <Item current={pathname === "/projects"}><SLink to="/projects">Projects</SLink></Item>
         </List>
     </Header>
 );
 
 
-export default SHeader;
+export default withRouter(SHeader);
